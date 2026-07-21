@@ -1,5 +1,9 @@
 # leakhound
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Runtime deps](https://img.shields.io/badge/runtime%20deps-zero-blue.svg)](#)
+[![Node](https://img.shields.io/badge/node-%3E%3D%2020-brightgreen.svg)](#)
+
 Zero-dependency Node.js CLI that scans a project directory for accidentally
 committed secrets — API keys, tokens, private keys — with an extra rule pack
 for popular Thai services (LINE, Omise, GB Prime Pay, Thai bank open APIs).
@@ -13,6 +17,13 @@ for popular Thai services (LINE, Omise, GB Prime Pay, Thai bank open APIs).
 > truffleHog concepts; this is a fully independent implementation. MIT licensed.
 
 ## Install / Usage
+
+Run directly from GitHub — no install needed:
+
+```bash
+npx github:iindrajeet4/leakhound            # scan the current directory
+npx github:iindrajeet4/leakhound ./my-project --json
+```
 
 ```bash
 # run directly
