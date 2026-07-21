@@ -1,0 +1,9 @@
+Internal notes (ALL FAKE, for scanner testing only)
+
+jwt example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkZha2UgVXNlciJ9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJVadQssw5c
+
+api_key = "Zk9x7Qw2Lm4Rt8Vb1Ny6Pc3Hd5Jf0Sg9"
+
+-----BEGIN RSA PRIVATE KEY-----
+(nothing real here, just the header for testing)
+-----END RSA PRIVATE KEY-----

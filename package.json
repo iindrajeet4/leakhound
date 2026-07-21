@@ -1,0 +1,20 @@
+{
+  "name": "leakhound",
+  "version": "1.0.0",
+  "description": "Zero-dependency secret scanner with a Thai-services rule pack. Inspired by gitleaks/truffleHog concepts; independent implementation.",
+  "license": "MIT",
+  "author": "Indrajeet D.",
+  "bin": {
+    "leakhound": "./leakhound.js"
+  },
+  "main": "leakhound.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test/test.js",
+    "scan": "node leakhound.js"
+  },
+  "keywords": ["secrets", "security", "scanner", "cli", "gitleaks", "thailand"],
+  "dependencies": {}
+}
