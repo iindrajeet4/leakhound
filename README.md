@@ -178,6 +178,45 @@ LINE Notify token, Omise (`skey_live_` / `pkey_live_`), GB Prime Pay
 MIT © 2026 Indrajeet D. Inspired by gitleaks/truffleHog concepts;
 independent implementation.
 
+## Use as a GitHub Action
+
+Scan every push and pull request — fails the check when a secret is found:
+
+```yaml
+name: secret scan
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  leakhound:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: iindrajeet4/leakhound@v1
+        # with:
+        #   path: "."        # directory to scan (default .)
+        #   args: "--json"   # extra CLI arguments
+```
+
+Comment on the pull request when secrets are found (optional):
+
+```yaml
+      - uses: iindrajeet4/leakhound@v1
+        id: scan
+        continue-on-error: true
+      - if: steps.scan.outcome == 'failure' && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              ...context.repo,
+              issue_number: context.issue.number,
+              body: '🐾 **leakhound** found potential secrets in this PR — check the "secret scan" job log, rotate any real keys, then push a fix.',
+            })
+      - if: steps.scan.outcome == 'failure'
+        run: exit 1
+```
+
 ---
 
 ## 💼 Services & custom work
