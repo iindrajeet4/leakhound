@@ -177,3 +177,12 @@ LINE Notify token, Omise (`skey_live_` / `pkey_live_`), GB Prime Pay
 
 MIT © 2026 Indrajeet D. Inspired by gitleaks/truffleHog concepts;
 independent implementation.
+
+---
+
+## 💼 Services & custom work
+
+I take on freelance and contract work around this project — custom implementation,
+new features, and integration with your stack.
+
+**Contact:** [GitHub @iindrajeet4](https://github.com/iindrajeet4) (opening an issue on this repo works too) · [DubeGames](https://dubegames.indrajeetdubeyy.workers.dev/)
